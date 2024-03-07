@@ -1,0 +1,483 @@
+/***********************************************/
+/*          Page Structure and Layout          */
+/***********************************************/
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.2fr 0.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header"
+      "Main"
+      "Footer";
+  }
+  
+  /***********************************************/
+  /*              Global Styling                 */
+  /***********************************************/
+  
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h5 {
+    font-family: "Outfit", sans-serif;
+  }
+  
+  h1 {
+    font-size: 40px
+  }
+  
+  h3 {
+    margin: 0px 0px 0px 0px;
+  }
+  
+  hr {
+    height: 1px;
+    background-color: red;
+    border: none;
+  }
+  
+  a:link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  
+  a:visited {
+    color: black;
+  }
+  
+  a:hover {
+    color: red;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /***********************************************/
+  /*               Header Styling                */
+  /***********************************************/
+  
+  header {
+    grid-area: Header;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    margin-left: 30px;
+  }
+  
+  header .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav a {
+    padding: 10px;
+  }
+  
+  .search_bar {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px white solid;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+  }
+  
+  .carousel_img img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /***********************************************/
+  /*            Main Content Styling             */
+  /***********************************************/
+  
+  main {
+    grid-area: Main;
+  }
+  
+  main .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  /***********************************************/
+  /*           Overview Section Styling          */
+  /***********************************************/
+  
+  .overview_circle {
+    display: flex;
+  }
+  
+  section.overview {
+    background-color: #4a4a4a;
+    color: white;
+    border-radius: 5px;
+    padding: 0px 20px 20px 20px;
+    width: 250px;
+    height: 30%;
+  }
+  
+  .circle_home {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: #e64c4c;
+    margin-left: 250px;
+    margin-top: 50px;
+    z-index: -1;
+  }
+  
+  .container .map {
+    width: 40%;
+    height: auto;
+    z-index: -2;
+  }
+  
+  /***********************************************/
+  /*     Home Page Section Container Styling     */
+  /***********************************************/
+  
+  .section_container {
+    background-color: #e0e0e0;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 40px 40px 40px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  
+  .section_container img {
+    transition: transform 0.9s;
+  }
+  
+  .section_container img:hover {
+    transform: scale(1.07);
+  }
+  
+  .container_images {
+    display: flex;
+    align-items: flex-start;
+    align-content: space-between;
+  }
+  
+  .container_images .main_image {
+    width: 40%;
+  }
+  
+  .support_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .support_images img {
+    margin-bottom: 3.85%;
+    width: 45%;
+  }
+  
+  .one_third_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 2%;
+  }
+  
+  .one_third_images img {
+    margin-bottom: 2.5%;
+    width: 32%;
+  }
+  
+  /***********************************************/
+  /*          Main with an Aside Section         */
+  /***********************************************/
+  
+  .main_with_aside {
+    margin-left: 15%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .text img {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .main_with_aside section.text {
+    width: 80%;
+    margin-bottom: 50px
+  }
+  
+  .aside_container {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 30px;
+  }
+  
+  aside {
+    width: 200px;
+    height: 420px;
+    background-color: #e0e0e0;
+    padding: 1px 10px 0px 10px;
+    border-radius: 5px;
+    margin: 100px 0px 50px 30px;
+  }
+  
+  .circle_aside {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: #e64c4c;
+    z-index: -1;
+    margin-top: 60px;
+    margin-right: 40px;
+  }
+  
+  aside figure {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 9px;
+    column-gap: 5px;
+    margin-left: 0px;
+  }
+  
+  aside figure img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .main_with_aside figure {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 0px;
+    column-gap: 10px;
+  }
+  
+  .main_with_aside figure img {
+    width: 40%;
+  }
+  
+  .main_with_aside figcaption {
+    font-size: 80%;
+  }
+  
+  /***********************************************/
+  /*          Main with Content Sections         */
+  /***********************************************/
+  
+  .contents ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-left: -10px;
+    margin-top: -10px;
+    column-gap: 50px;
+    row-gap: 30px;
+    color: #383838;
+    padding: 10px;
+  }
+  
+  /***********************************************/
+  /*               Footer Styling                */
+  /***********************************************/
+  
+  footer {
+    grid-area: Footer;
+    background-color: #e0e0e0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .icons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .social_media_icons {
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    margin-top: -15px;
+  }
+  
+  footer section {
+    display: flex;
+    flex-direction: row;
+    margin-top: -20px;
+  }
+  
+  footer ul {
+    list-style-type: none;
+    margin-top: 20px;
+    line-height: 10px;
+    font-size: 10px;
+  }
+  
+  .subscribe_text {
+    font-size: 10px;
+  }
+  
+  input[type=submit] {
+    background-color: #ea3e3e;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .small_print {
+    color: dimgrey;
+    font-size: 8px;
+    margin-top: 2px;
+  }
+  
+  /***********************************************/
+  /*                Media Queries                */
+  /***********************************************/
+  
+  @media (max-width: 768px) {
+  
+    /* HEADER STYLING */
+  
+    header .container {
+      justify-content: center;
+      flex-direction: column;
+      line-height: 30px;
+    }
+  
+    nav {
+      margin-bottom: 15px;
+    }
+  
+    nav a {
+      background-color: #ffe0e0;
+      border-radius: 5px;
+    }
+  
+    .carousel_img {
+      margin-top: 10px;
+    }
+  
+    /* HOME PAGE STYLING */
+  
+    .section_container {
+      width: 70%;
+    }
+  
+    .container .map {
+      width: 70%;
+      height: auto;
+      z-index: -2;
+    }
+  
+    .container_images {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+    }
+  
+    .container_images .main_image {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    /* Trying to get "main_image" to work on home page */
+    /* .container_images .main_image {
+      width: 56%;
+      margin-bottom: 15px;
+    } */
+  
+    .support_images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .support_images img {
+      margin-bottom: 3.85%;
+      width: 48%;
+    }
+  
+    .one_third_images {
+      margin-right: 0;
+    }
+  
+    .support_page_text {
+      margin-bottom: 50px;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  
+    /* MAIN WITH ASIDE SECTIONS */
+  
+    .main_with_aside {
+      margin-left: 5px;
+      margin-right: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    aside {
+      padding: 0px 10px 0px 10px;
+      margin: 10px 0px 50px 0px;
+    }
+  
+    .circle_aside {
+      z-index: -1;
+      margin-top: -30px;
+      margin-right: 40px;
+    }
+  
+    /* CONTENT LISTS */
+  
+    .contents ul li {
+      border: 1px black solid;
+      padding: 10px;
+      border-radius: 5px;
+      row-gap: 5px;
+    }
+  
+    .contents ul {
+      row-gap: 8px;
+      column-gap: 6px;
+    }
+  }
